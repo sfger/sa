@@ -1,0 +1,104 @@
+IFNDEF NTSTRSAFE_INC
+NTSTRSAFE_INC equ <1>
+
+PROTO64 external,RaiseException, :QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlAnsiCharToUnicodeChar, :QWORD
+PROTO64 external,RtlMultiByteToUnicodeN, :QWORD,:QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlRaiseException, :QWORD
+PROTO64 external,RtlStringCatExWorkerA, :QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCatExWorkerW, :QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCatNExWorkerA, :QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCatNExWorkerW, :QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCatNWorkerA, :QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCatNWorkerW, :QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCatWorkerA, :QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCatWorkerW, :QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCbCatA, :QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCbCatExA, :QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCbCatExW, :QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCbCatNA, :QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCbCatNExA, :QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCbCatNExW, :QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCbCatNW, :QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCbCatW, :QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCbCopyA, :QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCbCopyExA, :QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCbCopyExW, :QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCbCopyNA, :QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCbCopyNExA, :QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCbCopyNExW, :QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCbCopyNW, :QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCbCopyW, :QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCbLengthA, :QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCbLengthW, :QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCbVPrintfA, :QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCbVPrintfExA, :QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCbVPrintfExW, :QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCbVPrintfW, :QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCchCatA, :QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCchCatExA, :QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCchCatExW, :QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCchCatNA, :QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCchCatNExA, :QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCchCatNExW, :QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCchCatNW, :QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCchCatW, :QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCchCopyA, :QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCchCopyExA, :QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCchCopyExW, :QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCchCopyNA, :QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCchCopyNExA, :QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCchCopyNExW, :QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCchCopyNW, :QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCchCopyW, :QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCchLengthA, :QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCchLengthW, :QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCchVPrintfA, :QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCchVPrintfExA, :QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCchVPrintfExW, :QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCchVPrintfW, :QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCopyExWorkerA, :QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCopyExWorkerW, :QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCopyNExWorkerA, :QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCopyNExWorkerW, :QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCopyNWorkerA, :QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCopyNWorkerW, :QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCopyWorkerA, :QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringCopyWorkerW, :QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringLengthWorkerA, :QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringLengthWorkerW, :QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringVPrintfExWorkerA, :QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringVPrintfExWorkerW, :QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringVPrintfWorkerA, :QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlStringVPrintfWorkerW, :QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlUnicodeStringCopyExWorker, :QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlUnicodeStringCopyStringExWorker, :QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlUnicodeStringCopyStringNExWorker, :QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlUnicodeStringCopyStringNWorker, :QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlUnicodeStringCopyStringWorker, :QWORD,:QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlUnicodeStringCopyWorker, :QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlUnicodeStringExHandleFailureWorker, :QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlUnicodeStringInitWorker, :QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlUnicodeStringLengthHelper, :QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlUnicodeStringVPrintfExWorker, :QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlUnicodeStringVPrintfWorker, :QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlUnicodeStringValidateDestWorker, :QWORD,:QWORD,:QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlUnicodeStringValidateSrcWorker, :QWORD,:QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlUnicodeStringValidateWorker, :QWORD,:QWORD,:QWORD
+PROTO64 external,RtlUnicodeToMultiByteN, :QWORD,:QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlUnicodeToMultiByteSize, :QWORD,:QWORD,:QWORD
+PROTO64 external,RtlUnwind, :QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,RtlUpcaseUnicodeChar, :QWORD
+PROTO64 external,RtlUpcaseUnicodeToMultiByteN, :QWORD,:QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,_rt_probe_read4, :QWORD
+PROTO64 external,_security_check_cookie, :QWORD
+PROTO64 external,_seh_longjmp_unwind, :QWORD
+PROTO64 external,xtoa, :QWORD,:QWORD,:QWORD,:QWORD
+PROTO64 external,xtow, :QWORD,:QWORD,:QWORD,:QWORD
+
+ELSE
+echo -----------------------------------------
+echo WARNING Duplicate include file ntstrsafe.inc
+echo -----------------------------------------
+ENDIF
+

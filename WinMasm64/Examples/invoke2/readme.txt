@@ -1,0 +1,1 @@
+couldn't get this one to assemble, perhaps someone more knowdledgable with writing macros can take a look at \Masm64\Macros\x64calling.inc as thats the macro code used in this one
